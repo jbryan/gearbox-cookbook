@@ -10,9 +10,9 @@ module ChefMustache
 
         def render_template(source, context)
             begin
-                open(source, 'r') do |file|
-                    yield Mustache.render(file.read(), context)
-                end
+                template = open(source, 'r').read()
+                result = Mustache.render(template, context)
+                yield result
             rescue Object => e
                 raise MustacheError.new(e, template, context)
             end

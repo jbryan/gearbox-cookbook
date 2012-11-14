@@ -9,6 +9,5 @@ attribute :group, :kind_of => String
 
 def variables(context)
   @additional_context = context
-  print "variables"
 end
 

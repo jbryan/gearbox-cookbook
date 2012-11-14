@@ -36,6 +36,13 @@ access_key_id = aws_creds["aws_access_key_id"]
 secret_access_key = aws_creds["aws_secret_access_key"]
 
 AWS::S3::Base.establish_connection!(
-    :access_key_id     => access_key_id,
-    :secret_access_key => secret_access_key
+  :access_key_id     => access_key_id,
+  :secret_access_key => secret_access_key
 )
+
+directory node['gearbox']['app_dir'] do
+  owner 'gearbox'
+  group 'gearbox'
+  mode "0775"
+end
+

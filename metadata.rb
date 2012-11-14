@@ -3,5 +3,5 @@ maintainer_email "jbryan@ci.uchicago.edu"
 license          "http://www.apache.org/licenses/LICENSE-2.0"
 description      "Installs/Configures gearbox"
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version IO.read(File.join(File.dirname(__FILE__), '.version'))
+version "0.0.30" 
 depends          "nginx"

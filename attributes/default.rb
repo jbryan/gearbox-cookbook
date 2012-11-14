@@ -13,11 +13,13 @@
 # limitations under the License.
 # 
 #
-default[:gearbox][:apps] = []
-default[:gearbox][:log_dir] = '/var/log/gearbox'
-default[:gearbox][:user] = 'gearbox'
-default[:gearbox][:artifact_bucket] = 'gearbox_build_artifacts'
-default[:gearbox][:app_dir] = '/usr/share/gearbox'
-default[:gearbox][:encrypted_data_bags] = []
-default[:gearbox][:data_bags] = []
-default[:gearbox][:versions] = {}
+default["gearbox"]["apps"] = []
+default["gearbox"]["log_dir"] = '/var/log/gearbox'
+default["gearbox"]["user"] = 'gearbox'
+default["gearbox"]["artifact_bucket"] = 'gearbox_build_artifacts'
+default["gearbox"]["app_dir"] = '/usr/share/gearbox'
+default["gearbox"]["encrypted_data_bags"] = {}
+default["gearbox"]["data_bags"] = {}
+default["gearbox"]["versions"] = {}
+default["gearbox"]["aws_user"] = "boto"
+default["gearbox"]["enable_globus"] = false
